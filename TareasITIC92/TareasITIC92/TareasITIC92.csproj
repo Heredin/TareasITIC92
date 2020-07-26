@@ -15,11 +15,15 @@
     <PackageReference Include="Node.js" Version="5.3.0" />
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="XamarinForms.CardView" Version="1.1.1.5" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Update="AddTarea.xaml.cs">
       <DependentUpon>AddTarea.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="TareaDetail.xaml.cs">
+      <DependentUpon>TareaDetail.xaml</DependentUpon>
     </Compile>
     <Compile Update="UpdateTarea.xaml.cs">
       <DependentUpon>UpdateTarea.xaml</DependentUpon>
@@ -28,6 +32,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="AddTarea.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TareaDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="UpdateTarea.xaml">

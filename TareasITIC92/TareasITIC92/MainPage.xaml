@@ -11,10 +11,10 @@
         <ToolbarItem  Text="Agregar" Clicked="OnAddTarea"/>
     </ContentPage.ToolbarItems>
 
-    <ListView ItemsSource="{Binding }" x:Name="tareasList" BackgroundColor="LightGray">
+    <ListView ItemsSource="{Binding }" x:Name="tareasList" BackgroundColor="LightGray" ItemTapped="ItemTappedDetail" >
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding Titulo}" Detail="{Binding FechaEntrega}">
+                <TextCell Text="{Binding Titulo}" Detail="{Binding FechaEntrega}" >
                     <TextCell.ContextActions>
                         <MenuItem CommandParameter="{Binding}"  Clicked="OnDeleteTarea" Text="Eliminar" IsDestructive="True" />
                         <MenuItem CommandParameter="{Binding}"  Clicked="OnUpdateTarea" Text="Editar" IsDestructive="True"/>
@@ -22,5 +22,6 @@
                 </TextCell>
             </DataTemplate>
         </ListView.ItemTemplate>
+        
     </ListView>
 </ContentPage>

@@ -74,9 +74,13 @@ namespace TareasITIC92
             
 
         }
-        
-        
 
+        async public void ItemTappedDetail(object sender, ItemTappedEventArgs e)
+        {
+           
+            var details = e.Item as Tarea;
+            await Navigation.PushAsync(new TareaDetail(details ));
 
+        }
     }
 }

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Detalles"
+             x:Class="TareasITIC92.TareaDetail">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center">
+            <Label Text="Detalles de la tarea" FontSize="Title" HorizontalTextAlignment="Center" />
+            <Image HeightRequest="150" WidthRequest="150" Source="https://cdmx.ciesas.edu.mx/wp-content/uploads/2018/11/Libros.jpg"/>
+            <Label x:Name="txtTitulo" HorizontalTextAlignment="Center" FontSize="Large" />
+            <Label x:Name="txtDetalle" HorizontalTextAlignment="Center" FontSize="Medium" />
+            <Label x:Name="txtValor" HorizontalTextAlignment="Center" FontSize="Medium" />
+            <Label x:Name="txtFechaEntrega" HorizontalTextAlignment="Center" FontSize="Subtitle" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
