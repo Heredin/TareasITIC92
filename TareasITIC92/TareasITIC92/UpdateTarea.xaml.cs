@@ -26,12 +26,14 @@ namespace TareasITIC92
             this.manager = manager;
             txtTitulo.Text = tarea.Titulo;
             txtDetalle.Text = tarea.Detalle;
+            txtValor.Text = tarea.Valor;
+            
            
         }
 
         async public void OnUpdateTarea(object sender, EventArgs e)
         {
-            await manager.Update(txtTitulo.Text, txtDetalle.Text,tarea.Id.ToString());
+            await manager.Update(txtTitulo.Text, txtDetalle.Text,txtValor.Text,txtFechaEntrega.Date.ToString(), tarea.Id.ToString());
         }
     }
 }

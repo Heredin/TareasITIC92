@@ -4,15 +4,17 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TareasITIC92.MainPage">
+             x:Class="TareasITIC92.MainPage"
+             Title="Tareas"
+             >
     <ContentPage.ToolbarItems  >
-        <ToolbarItem Text="Agregar" Clicked="OnAddTarea"/>
+        <ToolbarItem  Text="Agregar" Clicked="OnAddTarea"/>
     </ContentPage.ToolbarItems>
 
     <ListView ItemsSource="{Binding }" x:Name="tareasList" BackgroundColor="LightGray">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding Titulo}" Detail="{Binding Detalle}">
+                <TextCell Text="{Binding Titulo}" Detail="{Binding FechaEntrega}">
                     <TextCell.ContextActions>
                         <MenuItem CommandParameter="{Binding}"  Clicked="OnDeleteTarea" Text="Eliminar" IsDestructive="True" />
                         <MenuItem CommandParameter="{Binding}"  Clicked="OnUpdateTarea" Text="Editar" IsDestructive="True"/>

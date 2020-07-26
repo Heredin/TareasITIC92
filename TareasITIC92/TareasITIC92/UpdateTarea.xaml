@@ -10,6 +10,9 @@
             <Label Text="Editar tarea" FontSize="Title" />
             <Entry x:Name="txtTitulo" Placeholder="Titulo" />
             <Entry x:Name="txtDetalle" Placeholder="Detalle" />
+            <Entry x:Name="txtValor" Placeholder="Valor" />
+            <DatePicker x:Name="txtFechaEntrega"  />
+
             <Button x:Name="btnActualizar" Text="Actualizar" Clicked="OnUpdateTarea"/>
 
         </StackLayout>

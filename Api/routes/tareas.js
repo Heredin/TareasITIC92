@@ -11,10 +11,12 @@ router.get('/', async function (req, res) {
 
 /* Post tareas creating. */
 router.post('/', async function (req, res)  {
-    let { Titulo, Detalle } = req.body;
+    let { Titulo, Detalle,Valor,FechaEntrega } = req.body;
     let tarea = await Tarea.create({
         titulo: Titulo,
-        detalle: Detalle
+        detalle: Detalle,
+        valor: Valor,
+        fechaentrega: FechaEntrega
     });
     res.json(tarea);
 });
@@ -34,10 +36,12 @@ router.delete('/:id', async function (req, res) {
 router.put('/:id', async function (req, res) {
     const id = parseInt(req.params.id)
     return await Tarea.findByPk(id).then((tareita) => {
-        const { Titulo, Detalle } = req.body
+        const { Titulo, Detalle, Valor, FechaEntrega } = req.body
         return tareita.update({
             titulo: Titulo,
-            detalle: Detalle
+            detalle: Detalle,
+            valor: Valor,
+            fechaentrega: FechaEntrega
         })
             .then(() => res.send(tareita))
             .catch((err) => {

@@ -22,12 +22,14 @@ namespace TareasITIC92.Data
             return JsonConvert.DeserializeObject<IEnumerable<Tarea>>(result);
         }
 
-        public async Task<Tarea> Add(string titulo, string detalle)
+        public async Task<Tarea> Add(string titulo, string detalle,string valor,string fechaentrega)
         {
             Tarea tarea = new Tarea()
             {
                 Titulo = titulo,
-                Detalle = detalle
+                Detalle = detalle,
+                Valor =valor,
+                FechaEntrega= fechaentrega,
             };
 
             HttpClient client = new HttpClient();
@@ -39,12 +41,14 @@ namespace TareasITIC92.Data
             return JsonConvert.DeserializeObject<Tarea>(
                 await response.Content.ReadAsStringAsync());
         }
-        public async Task<Tarea> Update(string titulo, string detalle,string itemIndex)
+        public async Task<Tarea> Update(string titulo, string detalle,string valor,string fechaentrega,string itemIndex)
         {
             Tarea tarea = new Tarea()
             {
                 Titulo = titulo,
-                Detalle = detalle
+                Detalle = detalle,
+                Valor=valor,
+                FechaEntrega=fechaentrega,
             };
             HttpClient client = new HttpClient();
             var response = await client.PutAsync(url + itemIndex,
@@ -64,12 +68,12 @@ namespace TareasITIC92.Data
       
         }
 
-        internal Task Add(object text1, object text2)
+        internal Task Add(object text1, object text2,object tex3,object text4)
         {
             throw new NotImplementedException();
 
         }
-        internal Task Update(object text1, object text2,string itemIndex)
+        internal Task Update(object text1, object text2,object text3,object text4 ,string itemIndex)
         {
             throw new NotImplementedException();
 

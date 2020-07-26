@@ -16,6 +16,12 @@ const Tarea = sequelize.define('Tarea', {
 	},
 	detalle: {
 		type: Sequelize.STRING
+	},
+	valor: {
+		type: Sequelize.STRING
+	},
+	fechaentrega: {
+		type: Sequelize.STRING
 	}
 });
 

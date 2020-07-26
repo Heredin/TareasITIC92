@@ -25,7 +25,7 @@ namespace TareasITIC92
 
         async public void OnSaveTarea(object sender, EventArgs e)
         {
-            await manager.Add(txtTitulo.Text, txtDetalle.Text);
+            await manager.Add(txtTitulo.Text, txtDetalle.Text,txtValor.Text,txtFechaEntrega.Date.ToString());
         }
 
     }
