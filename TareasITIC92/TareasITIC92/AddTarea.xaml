@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TareasITIC92.AddTarea">
+    <ContentPage.Content>
+        <StackLayout Spacing="20">
+            <Label Text="Tarea" FontSize="Title" />
+            <Entry x:Name="txtTitulo" Placeholder="Titulo" />
+            <Entry x:Name="txtDetalle" Placeholder="Detalle" />
+            <Button x:Name="btnGuardar" Text="Guardar" Clicked="OnSaveTarea"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
